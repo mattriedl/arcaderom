@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Now Playing — Arcade Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="play-page">
+  <header class="site-header">
+    <a class="logo" href="./">ARCADE<span>WEBSITE</span></a>
+    <nav><a href="./">← Back to games</a></nav>
+  </header>
+
+  <main class="player-wrap">
+    <div class="now-playing">
+      <h1 id="title">Loading…</h1>
+      <small id="subtitle"></small>
+    </div>
+    <div class="screen">
+      <div id="game"></div>
+    </div>
+    <p id="error" class="error" hidden></p>
+    <p class="hint">Tip: open the emulator menu (bottom bar) to save or load state, change controls, or go full screen. Gamepads are detected automatically.</p>
+  </main>
+
+  <script type="module" src="js/play.js"></script>
+</body>
+</html>

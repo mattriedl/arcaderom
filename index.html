@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcade Website — Play Retro Games in Your Browser</title>
+  <meta name="description" content="Play classic console games right in your browser. Load your own game files or try free homebrew titles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="./">ARCADE<span>WEBSITE</span></a>
+    <nav>
+      <a href="#play">Play</a>
+      <a href="#library">Library</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">INSERT COIN</p>
+      <h1>Retro games,<br>right in your browser.</h1>
+      <p class="lede">NES, SNES, Game Boy, Genesis, N64 and more. No downloads, no plugins — just drop in a game and press start.</p>
+    </section>
+
+    <section id="play" class="panel">
+      <h2>Play your own game</h2>
+      <label id="dropzone" class="dropzone" tabindex="0">
+        <input id="file-input" type="file" hidden>
+        <div class="dz-icon" aria-hidden="true">▶</div>
+        <strong>Drop a game file here</strong>
+        <span>or click to choose one from your computer</span>
+        <small>Your file stays on your device — it is never uploaded.</small>
+      </label>
+
+      <div id="system-picker" class="system-picker" hidden>
+        <p>Which system is <b id="picker-file"></b> for?</p>
+        <select id="system-select"></select>
+        <button id="picker-go" class="btn">Play</button>
+      </div>
+
+      <div id="recent-wrap" hidden>
+        <h3>Your recent games</h3>
+        <p class="hint">Saved in this browser so you can jump back in. Save states are kept too.</p>
+        <ul id="recent" class="card-grid"></ul>
+      </div>
+    </section>
+
+    <section id="library" class="panel">
+      <div class="panel-head">
+        <h2>Free game library</h2>
+        <div class="filters" id="filters"></div>
+      </div>
+      <ul id="catalog" class="card-grid"></ul>
+      <p id="catalog-empty" class="hint" hidden>Free homebrew games are coming soon. In the meantime, load your own game above.</p>
+    </section>
+
+    <section id="about" class="panel about">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div><b>1</b><p>Pick a free game from the library, or load a game file you own.</p></div>
+        <div><b>2</b><p>The emulator runs entirely in your browser — on desktop or mobile.</p></div>
+        <div><b>3</b><p>Use the in-game menu to save your progress, remap controls, or plug in a gamepad.</p></div>
+      </div>
+      <p class="hint">Only play games you own or that are freely licensed. Arcade Website does not host or distribute commercial game files.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ArcadeWebsite.com · Emulation powered by <a href="https://emulatorjs.org" rel="noopener">EmulatorJS</a> (GPL-3.0)</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
